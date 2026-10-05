@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f8f5" />
+    <meta
+      name="description"
+      content="Aditya Kadepure is a full-stack developer working with Python, modern web technologies, databases, APIs, analytics, and data tools."
+    />
+    <title>Aditya Kadepure | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="Script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <a class="wordmark" href="#top" aria-label="Aditya Kadepure home"
+          >Aditya <span>Kadepure</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#work">Projects <span>02</span></a>
+          <a href="#ai">Data &amp; AI</a>
+          <a href="#atlas">Technical skills</a>
+          <a href="#experience">Professional experience</a>
+          <a href="#education">Education</a>
+          <a href="#about">About me</a>
+          <a
+            class="nav-download"
+            href="ADITYA_KADEPURE_CV.pdf"
+            download="ADITYA_KADEPURE_CV.pdf"
+            >Download resume &amp; CV <span aria-hidden="true">↓</span></a
+          >
+          <a class="nav-contact" href="#contact"
+            >Let’s talk <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="live-dot"></span> Aditya Kadepure
+              <span class="eyebrow-divider">/</span> Full-stack developer
+            </p>
+            <h1 id="hero-title">
+              Full-stack<br />developer.<br /><span>Data-minded.</span>
+            </h1>
+            <p class="hero-description">
+              I build responsive web applications with Python and modern
+              frontend and backend technologies. My work spans APIs, databases,
+              analytics, and data tools.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#work"
+                >Explore selected work <span aria-hidden="true">↘</span></a
+              >
+              <a class="text-link" href="#atlas"
+                >Explore my expertise <span aria-hidden="true">↓</span></a
+              >
+            </div>
+            <div class="hero-footnote">
+              <span>01</span> Python · MERN · Analytics · Data science
+            </div>
+          </div>
+
+          <div class="atlas-preview" aria-label="Interactive CV skill map">
+            <div class="preview-topline">
+              <span>ADITYA'S SKILL MAP / GRAPH</span>
+            </div>
+            <div class="map-canvas" id="skill-map-canvas">
+              <span class="map-coordinate coordinate-a">HYDERABAD, INDIA</span>
+              <span class="map-coordinate coordinate-b"
+                >CV · TECHNICAL SKILLS</span
+              >
+              <div class="map-lines" aria-hidden="true">
+                <i class="line line-a"></i><i class="line line-b"></i
+                ><i class="line line-c"></i><i class="line line-d"></i
+                ><i class="line line-e"></i><i class="line line-f"></i
+                ><i class="line line-g"></i><i class="line line-h"></i>
+              </div>
+              <div class="map-center">
+                <span class="center-cross">+</span><span>ADITYA K.</span
+                ><small>CODE + DATA</small>
+              </div>
+              <button
+                class="map-node node-languages is-selected"
+                data-specialty="Languages"
+                aria-pressed="true"
+              >
+                <span class="node-mark">{ }</span><span>Languages</span>
+              </button>
+              <button
+                class="map-node node-backend"
+                data-specialty="Backend"
+                aria-pressed="false"
+              >
+                <span class="node-mark">API</span><span>Backend</span>
+              </button>
+              <button
+                class="map-node node-frontend"
+                data-specialty="Frontend"
+                aria-pressed="false"
+              >
+                <span class="node-mark">UI</span><span>Frontend</span>
+              </button>
+              <button
+                class="map-node node-data-science"
+                data-specialty="Data Science"
+                aria-pressed="false"
+              >
+                <span class="node-mark">DS</span><span>Data Science</span>
+              </button>
+              <button
+                class="map-node node-databases"
+                data-specialty="Databases"
+                aria-pressed="false"
+              >
+                <span class="node-mark">SQL</span><span>Databases</span>
+              </button>
+              <button
+                class="map-node node-analytics"
+                data-specialty="Analytics"
+                aria-pressed="false"
+              >
+                <span class="node-mark">BI</span><span>BI + Sheets</span>
+              </button>
+              <button
+                class="map-node node-platforms"
+                data-specialty="Platforms"
+                aria-pressed="false"
+              >
+                <span class="node-mark">AWS</span><span>Platforms</span>
+              </button>
+              <button
+                class="map-node node-tools"
+                data-specialty="Tools"
+                aria-pressed="false"
+              >
+                <span class="node-mark">DEV</span><span>Tools + AI</span>
+              </button>
+              <span class="map-ring ring-one" aria-hidden="true"></span
+              ><span class="map-ring ring-two" aria-hidden="true"></span>
+              <div class="skill-graph" id="skill-graph" hidden>
+                <div class="skill-graph-header">
+                  <button
+                    class="skill-graph-back"
+                    id="skill-graph-back"
+                    type="button"
+                  >
+                    <span aria-hidden="true">←</span> ALL GROUPS
+                  </button>
+                  <span class="skill-graph-label">CV SKILL NETWORK</span>
+                </div>
+                <div class="skill-graph-content">
+                  <span class="skill-graph-hub" id="skill-graph-hub"></span>
+                  <span class="skill-graph-trunk" aria-hidden="true"></span>
+                  <div
+                    class="skill-graph-nodes"
+                    id="skill-graph-nodes"
+                    aria-label="Skills in selected group"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="preview-bottomline">
+              <span>LANGUAGES · FRAMEWORKS · DATA · TOOLS</span><span>↗</span>
+            </div>
+          </div>
+
+          <div class="hero-side-note" aria-hidden="true">
+            PYTHON / MERN / DATA
+          </div>
+        </section>
+
+        <div class="ticker" aria-label="Areas of practice">
+          <div class="ticker-track">
+            <span>PYTHON FULL STACK</span><b>✳</b><span>MERN DEVELOPMENT</span
+            ><b>✳</b><span>DATA ANALYTICS</span><b>✳</b
+            ><span>MACHINE LEARNING</span><b>✳</b><span>SQL &amp; APIs</span
+            ><b>✳</b><span>PYTHON FULL STACK</span><b>✳</b
+            ><span>MERN DEVELOPMENT</span><b>✳</b><span>DATA ANALYTICS</span
+            ><b>✳</b><span>MACHINE LEARNING</span><b>✳</b
+            ><span>SQL &amp; APIs</span><b>✳</b>
+          </div>
+        </div>
+
+        <section
+          class="ai-section section-pad"
+          id="ai"
+          aria-labelledby="ai-title"
+        >
+          <div class="ai-copy">
+            <p class="eyebrow">
+              DATA SCIENCE <span class="eyebrow-divider">/</span> PRACTICAL ML
+            </p>
+            <h2 id="ai-title">Data that<br />drives <span>decisions.</span></h2>
+            <p>
+              I use Python, SQL, analytics, and machine learning to make complex
+              information easier to understand and act on.
+            </p>
+            <div class="ai-principles" aria-label="AI principles">
+              <span><b>01</b> Clean and validate the data</span>
+              <span><b>02</b> Choose methods for the question</span>
+              <span><b>03</b> Explain the result clearly</span>
+            </div>
+          </div>
+          <div class="ai-invitation">
+            <span class="ai-invitation-mark" aria-hidden="true">✳</span>
+            <h3>Meet the portfolio agent.</h3>
+            <p>Ask about Python, MERN, analytics, or machine learning.</p>
+            <button
+              class="ai-open-button"
+              id="ai-open-chat"
+              type="button"
+              aria-expanded="false"
+              aria-controls="chatbot-panel"
+            >
+              <span class="ai-open-label">Open the conversation</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+            <span class="ai-invitation-note"
+                >PORTFOLIO-ONLY ANSWERS / NO MODEL CONNECTED</span
+            >
+          </div>
+        </section>
+
+        <section
+          class="work-section section-pad"
+          id="work"
+          aria-labelledby="work-title"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">
+                FULL-STACK &amp; WEB PROJECTS
+                <span class="eyebrow-divider">/</span> CV SELECTED
+              </p>
+              <h2 id="work-title">Selected <span>projects.</span></h2>
+            </div>
+            <p class="section-intro">
+              Responsive web development and an inventory-management system,
+              built with the tools used in the work.
+            </p>
+          </div>
+          <div class="project-toolbar">
+            <p class="filter-label">
+              FILTER BY SKILL GROUP
+              <span id="project-count">02 PROJECTS</span>
+            </p>
+            <div
+              class="filter-list"
+              role="group"
+              aria-label="Filter projects by discipline"
+            >
+              <button
+                class="filter-button is-active"
+                data-filter="All"
+                aria-pressed="true"
+              >
+                All work
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Languages"
+                aria-pressed="false"
+              >
+                Languages
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Backend"
+                aria-pressed="false"
+              >
+                Backend
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Frontend"
+                aria-pressed="false"
+              >
+                Frontend
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Data Science"
+                aria-pressed="false"
+              >
+                Data Science
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Data Analytics"
+                aria-pressed="false"
+              >
+                Data Analytics
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Databases"
+                aria-pressed="false"
+              >
+                Databases
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Analytics"
+                aria-pressed="false"
+              >
+                BI + Sheets
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Platforms"
+                aria-pressed="false"
+              >
+                Platforms
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Tools"
+                aria-pressed="false"
+              >
+                Tools + AI
+              </button>
+              <button
+                class="filter-button"
+                data-filter="Full Stack"
+                aria-pressed="false"
+              >
+                Full Stack
+              </button>
+            </div>
+          </div>
+
+          <div class="project-grid" id="project-grid">
+            <article
+              class="project-card project-wide"
+              data-disciplines="Languages Frontend Tools Full-Stack"
+            >
+              <a
+                class="project-image image-common"
+                href="#contact"
+                aria-label="Discuss the Chhatrapati Shivray Marathi Sahitya Sanskriti Mandal website"
+              >
+                <img
+                  src="assets/project-1-poster.png"
+                  alt="Poster for Chhatrapati Shivray Marathi Sahitya Sanskriti Mandal featuring an illustrated portrait of Chhatrapati Shivaji Maharaj"
+                  loading="lazy"
+                />
+                <span class="image-index">CV PROJECT 001</span
+                  ><span class="image-arrow" aria-hidden="true">↗</span>
+                  <span class="image-caption" style="color: black;">01 / Trust Publication</span>
+              </a>
+              <div class="project-meta">
+                <div>
+                  <p class="project-type">
+                    WEBSITE DEVELOPMENT <span>·</span> NONPROFIT
+                  </p>
+                  <h3>Chhatrapati Shivray Marathi Sahitya Sanskriti Mandal</h3>
+                </div>
+                <span class="project-number">01 — 02</span>
+              </div>
+              <p class="project-summary">
+                Developed and deployed a responsive website to support
+                marketing, individual donations, digital growth, and
+                organizational growth.
+              </p>
+              <div class="tag-row">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+                ><span>Bootstrap</span><span>Hostinger</span><span>Git</span
+                ><span>GitHub</span>
+              </div>
+            </article>
+
+            <article
+              class="project-card project-wide"
+              data-disciplines="Languages Frontend Tools Data-Analytics Full-Stack"
+            >
+              <a
+                class="project-image image-infrastructure"
+                href="#contact"
+                aria-label="Discuss the Inno-I inventory management system"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                  alt="Warehouse shelving and stored inventory"
+                  loading="lazy"
+                />
+                <span class="image-index">CV PROJECT 002</span
+                ><span class="image-arrow" aria-hidden="true">↗</span>
+                <span class="image-caption">02 / Inventory management</span>
+              </a>
+              <div class="project-meta">
+                <div>
+                  <p class="project-type">
+                    WEB APPLICATION <span>·</span> INVENTORY SYSTEM
+                  </p>
+                  <h3>Inno-I Inventory Management System</h3>
+                </div>
+                <span class="project-number">02 — 02</span>
+              </div>
+              <p class="project-summary">
+                Developed an inventory management system to help prevent
+                overstocking, reduce waste and losses, improve inventory
+                accuracy, and support cash flow.
+              </p>
+              <div class="tag-row">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+                ><span>Bootstrap</span><span>Node.js</span><span>MySql</span><span>RestApi's</span><span>React.js</span><span>Prisma ORM</span><span>Hostinger</span><span>Git</span
+                ><span>GitHub</span>
+              </div>
+            </article>
+          </div>
+          <p class="empty-state" id="empty-state" hidden>
+            No CV project is tagged with this skill group yet. Try another
+            filter.
+          </p>
+          <div class="work-endnote">
+            <span>END OF INDEX</span><span>MORE IN THE WORKS <i></i></span>
+          </div>
+        </section>
+
+        <section
+          class="experience-section section-pad"
+          id="experience"
+          aria-labelledby="experience-title"
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">PROFESSIONAL EXPERIENCE / 2024—2026</p>
+              <h2 id="experience-title">Career <span>history.</span></h2>
+            </div>
+            <p class="section-intro">
+              Web development roles spanning responsive frontend work,
+              application maintenance, and Python full-stack development.
+            </p>
+          </div>
+          <div class="experience-list">
+            <article class="experience-item">
+              <div class="experience-date">
+                <span>09/2026</span><span>Hyderabad</span>
+              </div>
+              <div class="experience-copy">
+                <h3>Python Full Stack Developer</h3>
+                <p class="experience-company">
+                  EPA Cybernest Solutions Pvt Ltd
+                </p>
+                <ul>
+                  <li>
+                    Build web applications with Python across frontend and
+                    backend.
+                  </li>
+                  <li>
+                    Work on database management, API integration, deployment,
+                    and testing.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="experience-item">
+              <div class="experience-date">
+                <span>12/2025 — 08/2026</span><span>Bangalore · Remote</span>
+              </div>
+              <div class="experience-copy">
+                <h3>Web Developer</h3>
+                <p class="experience-company">Zidio Development Company</p>
+                <ul>
+                  <li>
+                    Develop frontend webpages with React, HTML, CSS, and
+                    JavaScript.
+                  </li>
+                  <li>
+                    Use Tailwind CSS and Bootstrap to build responsive page
+                    layouts.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="experience-item">
+              <div class="experience-date">
+                <span>04/2024 — 11/2025</span><span>Bidar</span>
+              </div>
+              <div class="experience-copy">
+                <h3>Junior Web Developer</h3>
+                <p class="experience-company">Shri Channabasaveshwar Gurukul</p>
+                <ul>
+                  <li>
+                    Build, update, and maintain websites and web applications.
+                  </li>
+                  <li>
+                    Support code maintenance, debugging, testing, and team
+                    collaboration.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="education-section"
+          id="education"
+          aria-labelledby="education-title"
+        >
+          <div class="education-inner section-pad">
+            <p class="eyebrow">EDUCATION / 2023—2026</p>
+            <div class="education-copy">
+              <h2 id="education-title">Bachelor of Computer Applications</h2>
+              <p>S.S.K. Basaveshwar UG &amp; PG College</p>
+              <span
+                >Affiliated with Bidar University · Basavakalyan 585327</span
+              >
+            </div>
+            <span class="education-date">08/2023 — 09/2026</span>
+          </div>
+        </section>
+
+        <section class="atlas-section" id="atlas" aria-labelledby="atlas-title">
+          <div class="atlas-inner section-pad">
+            <div class="atlas-heading">
+              <p class="eyebrow">TECHNICAL SKILLS / FROM THE CV</p>
+              <h2 id="atlas-title">Technical <span>skills.</span></h2>
+              <p>Explore every tool and technology by skill group.</p>
+            </div>
+            <div class="atlas-detail" aria-live="polite">
+              <div class="detail-topline">
+                <span>ACTIVE SKILL GROUP</span>
+                <div
+                  class="skill-carousel-controls"
+                  role="group"
+                  aria-label="Browse technical skill groups"
+                >
+                  <button
+                    id="skill-previous"
+                    type="button"
+                    aria-label="Previous skill group"
+                    title="Previous skill group"
+                  >
+                    ←
+                  </button>
+                  <button
+                    id="skill-next"
+                    type="button"
+                    aria-label="Next skill group"
+                    title="Next skill group"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+              <div class="detail-content">
+                <span class="detail-symbol" id="lens-symbol">{ }</span>
+                <div>
+                  <h3 id="lens-title">Languages</h3>
+                  <p id="lens-description">
+                    Python, JavaScript, ES6+, HTML5, CSS3, and SQL.
+                  </p>
+                </div>
+              </div>
+              <div class="detail-bottomline">
+                <span
+                  id="lens-tags"
+                  class="skill-chip-list"
+                  aria-label="Tools in this skill group"
+                >
+                  <span>Python</span><span>JavaScript</span><span>ES6+</span
+                  ><span>HTML5</span><span>CSS3</span><span>SQL</span></span
+                ><button
+                  class="detail-work-link"
+                  id="lens-work-link"
+                  type="button"
+                >
+                  View related work <span aria-hidden="true">↘</span>
+                </button>
+              </div>
+            </div>
+            <div class="atlas-coordinate">
+              FIG 01 <span>—</span> DEVELOPMENT + DATA
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="about-section section-pad"
+          id="about"
+          aria-labelledby="about-title"
+        >
+          <div class="about-stamp">
+            <span>FULL STACK<br />BY PRACTICE</span><i>✳</i
+            ><span>DATA LED<br />BY DESIGN</span>
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow">ABOUT ME / HOW I APPROACH THE WORK</p>
+            <h2 id="about-title">
+              I like building<br />the whole thing<br />and finding
+              <span>what the data says.</span>
+            </h2>
+            <p class="about-description">
+              My background combines Python full-stack development, frontend
+              development, database management, version control, responsive web
+              design, and API development. I also work with data-analysis and
+              business-intelligence tools.
+            </p>
+            <a class="text-link" href="#contact"
+              >Discuss a project <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="about-aside">
+            <span class="aside-mark">“</span>
+            <p>
+              GOOD SOFTWARE ANSWERS A REAL NEED. GOOD ANALYSIS MAKES THE NEXT
+              STEP CLEAR.
+            </p>
+            <span class="aside-credit"
+              >A PRACTICAL WORKING PRINCIPLE <i></i
+            ></span>
+          </div>
+        </section>
+
+        <section
+          class="contact-section"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
+          <div class="contact-inner section-pad">
+            <div class="contact-main">
+              <p class="eyebrow">BUILDING AN APP OR EXPLORING DATA?</p>
+              <h2 id="contact-title">
+                Let’s build<br /><span>something useful.</span>
+              </h2>
+              <p>
+                Let’s talk about your Python or MERN application, analytics
+                dashboard, or data-science problem.
+              </p>
+              <button
+                class="button button-light"
+                id="contact-form-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="contact-form"
+              >
+                <span id="contact-form-toggle-label">Start a conversation</span>
+                <span aria-hidden="true">↗</span>
+              </button>
+              <form class="contact-form" id="contact-form" hidden>
+                <div class="contact-form-grid">
+                  <label>
+                    Name
+                    <input
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      maxlength="100"
+                      required
+                    />
+                  </label>
+                  <label>
+                    Email
+                    <input
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      maxlength="254"
+                      required
+                    />
+                  </label>
+                  <label>
+                    Phone number
+                    <input
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                      maxlength="40"
+                      required
+                    />
+                  </label>
+                  <label class="contact-form-reason">
+                    Reason for reaching out
+                    <textarea
+                      name="reason"
+                      rows="4"
+                      maxlength="1500"
+                      required
+                    ></textarea>
+                  </label>
+                </div>
+                <div class="contact-form-actions">
+                  <button class="button button-light" type="submit">
+                    Compose email <span aria-hidden="true">↗</span>
+                  </button>
+                  <p class="contact-form-note" id="contact-form-note">
+                    Opens your email app with these details. Nothing is stored
+                    on this site.
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div class="contact-side">
+              <span class="contact-coordinate">LOCATION</span>
+              <p>Hyderabad, India</p>
+              <span class="contact-coordinate">EMAIL</span>
+              <p>
+                <a href="mailto:mradik731@gmail.com">mradik731@gmail.com</a>
+              </p>
+              <span class="contact-coordinate">PHONE</span>
+              <p><a href="tel:+917353758627">+91 73537 58627</a></p>
+              <a href="#top" class="back-top"
+                >BACK TO THE TOP <span aria-hidden="true">↑</span></a
+              >
+            </div>
+            <span class="contact-watermark" aria-hidden="true"
+              >Aditya Kadepure</span
+            >
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="footer-mark" href="#top">Aditya <span>Kadepure</span></a
+        ><a
+          class="footer-download"
+          href="ADITYA_KADEPURE_CV.pdf"
+          download="ADITYA_KADEPURE_CV.pdf"
+          >Download resume &amp; CV <span aria-hidden="true">↓</span></a
+        ><span>PYTHON FULL STACK / WEB DEVELOPMENT / DATA TOOLS</span
+        ><span>© <span id="current-year">2026</span> ADITYA KADEPURE</span>
+      </footer>
+    </div>
+    <aside class="portfolio-chat" aria-label="Portfolio agent chat">
+      <section
+        class="chatbot-panel"
+        id="chatbot-panel"
+        role="dialog"
+        aria-labelledby="chatbot-title"
+        aria-modal="false"
+        hidden
+      >
+        <header class="chatbot-header">
+          <span class="chatbot-avatar" aria-hidden="true">✳</span>
+          <div class="chatbot-heading">
+            <span>ADITYA / PORTFOLIO GUIDE</span>
+            <h2 id="chatbot-title">Portfolio agent</h2>
+          </div>
+          <button
+            class="chatbot-close"
+            id="chatbot-close"
+            type="button"
+            aria-label="Close portfolio agent"
+          >
+            ×
+          </button>
+        </header>
+        <form class="ai-console" id="portfolio-guide">
+          <div class="ai-console-topline">
+            <span><i class="live-dot"></i> READY TO EXPLORE</span>
+            <span class="demo-label">LOCAL AGENT / PROTOTYPE</span>
+          </div>
+          <div
+            class="ai-conversation"
+            id="ai-response"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <span class="ai-speaker">AGENT / 01</span>
+            <p>
+              Hi. Ask about Aditya’s profile, skills, projects, experience,
+              education, or contact details listed on this website. I won’t
+              guess information the portfolio doesn’t include.
+            </p>
+          </div>
+          <div class="ai-prompts" aria-label="Suggested questions">
+            <button type="button" data-prompt="Tell me about my technical skills">
+              Technical skills
+            </button>
+            <button
+              type="button"
+              data-prompt="Tell me about the Inno-I project"
+            >
+              Inno-I project
+            </button>
+            <button type="button" data-prompt="Take me to contact">
+              Let's talk
+            </button>
+          </div>
+          <div class="ai-input-row">
+            <label class="visually-hidden" for="ai-prompt"
+              >Ask the portfolio agent</label
+            >
+            <input
+              id="ai-prompt"
+              name="prompt"
+              type="text"
+              maxlength="180"
+              placeholder="Ask a question..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit" aria-label="Send question">↗</button>
+          </div>
+          <p class="ai-disclaimer">
+            Answers use information listed on this portfolio website only.
+            Unlisted details are not guessed, and no prompt leaves this page.
+          </p>
+        </form>
+      </section>
+      <button
+        class="chatbot-toggle"
+        id="chatbot-toggle"
+        type="button"
+        aria-label="Open portfolio agent; drag to move"
+        aria-expanded="false"
+        aria-controls="chatbot-panel"
+        title="Click to chat. Drag to move."
+      >
+        <span class="chatbot-open-icon" aria-hidden="true">✳</span>
+        <span class="chatbot-close-icon" aria-hidden="true">×</span>
+      </button>
+    </aside>
+  </body>
+</html>
