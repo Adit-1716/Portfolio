@@ -1,0 +1,14 @@
+@media (min-width: 1450px) {
+  .hero {
+    min-height: 750px;
+  }
+  .map-canvas {
+    height: 445px;
+  }
+  .project-image {
+    height: 280px;
+  }
+  .project-wide .project-image {
+    height: 320px;
+  }
+}

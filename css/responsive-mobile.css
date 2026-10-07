@@ -1,0 +1,350 @@
+@media (max-width: 720px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+  .hero {
+    padding: 58px 6% 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 39px;
+  }
+  .hero h1 {
+    font-size: 62px;
+    letter-spacing: -4.5px;
+  }
+  .hero-description {
+    font-size: 13px;
+    max-width: 440px;
+  }
+  .hero-footnote {
+    margin-top: 35px;
+  }
+  .atlas-preview {
+    max-width: none;
+    padding: 12px 12px 10px;
+  }
+  .map-canvas {
+    height: 83vw;
+    min-height: 300px;
+    max-height: 390px;
+    background-size: 26px 26px;
+  }
+  .skill-graph {
+    padding: 9px 9px 10px;
+  }
+  .skill-graph-nodes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px 5px;
+    padding-top: 16px;
+  }
+  .skill-graph-nodes::before {
+    left: 25%;
+    right: 25%;
+  }
+  .skill-graph-node::before {
+    top: -9px;
+    height: 9px;
+  }
+  .skill-graph-node {
+    min-height: 32px;
+    padding: 4px 5px;
+    font-size: 7px;
+  }
+  .ring-one {
+    width: 205px;
+    height: 205px;
+  }
+  .ring-two {
+    width: 285px;
+    height: 285px;
+  }
+  .line-a {
+    width: 104px;
+  }
+  .line-b {
+    width: 100px;
+  }
+  .line-c {
+    width: 104px;
+  }
+  .line-d {
+    width: 100px;
+  }
+  .line-e {
+    width: 107px;
+  }
+  .line-f {
+    width: 100px;
+  }
+  .line-g {
+    width: 104px;
+  }
+  .line-h {
+    width: 100px;
+  }
+  .map-center {
+    width: 91px;
+    height: 91px;
+    font-size: 11px;
+  }
+  .map-center small {
+    font-size: 6px;
+  }
+  .node-mark {
+    width: 34px;
+    height: 34px;
+  }
+  .map-node {
+    font-size: 8px;
+  }
+  .hero-side-note {
+    display: none;
+  }
+  .ticker {
+    height: 43px;
+  }
+  .ticker-track {
+    gap: 19px;
+    font-size: 8px;
+  }
+  .ai-section {
+    padding-top: 68px;
+    padding-bottom: 72px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .ai-invitation {
+    min-height: 220px;
+  }
+  .portfolio-chat {
+    right: 13px;
+    bottom: 13px;
+    width: 54px;
+    height: 54px;
+  }
+  .chatbot-panel {
+    bottom: 70px;
+    width: calc(100vw - 26px);
+    max-width: 390px;
+    max-height: calc(100vh - 96px);
+    max-height: min(680px, calc(100vh - 96px));
+    max-height: min(680px, calc(100dvh - 96px));
+  }
+  .chatbot-panel .ai-console {
+    max-height: calc(100vh - 175px);
+    max-height: min(590px, calc(100vh - 175px));
+    max-height: min(590px, calc(100dvh - 175px));
+  }
+  .chatbot-toggle {
+    width: 54px;
+    height: 54px;
+  }
+  .ai-copy h2 {
+    font-size: 49px;
+  }
+  .ai-console {
+    padding: 17px;
+  }
+  .ai-conversation {
+    min-height: 150px;
+  }
+  .section-pad {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .work-section {
+    padding-top: 72px;
+    padding-bottom: 70px;
+  }
+  .experience-section {
+    padding-top: 72px;
+    padding-bottom: 76px;
+  }
+  .experience-item {
+    grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
+    gap: 22px;
+  }
+  .education-inner {
+    min-height: 0;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+  }
+  .education-inner .eyebrow {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .education-copy h2 {
+    font-size: 23px;
+  }
+  .section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .section-heading h2 {
+    font-size: 48px;
+  }
+  .section-intro {
+    margin-top: 16px;
+    max-width: 400px;
+  }
+  .project-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .filter-list {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 4px 5px;
+  }
+  .filter-button {
+    flex: 0 0 auto;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+  }
+  .project-image,
+  .project-wide .project-image {
+    height: 63vw;
+    min-height: 215px;
+    max-height: 320px;
+  }
+  .work-endnote {
+    margin-top: 32px;
+  }
+  .atlas-inner {
+    padding-top: 65px;
+    padding-bottom: 66px;
+    grid-template-columns: 1fr;
+    gap: 29px;
+  }
+  .atlas-heading h2 {
+    font-size: 47px;
+  }
+  .atlas-detail {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .atlas-coordinate {
+    right: 6%;
+    bottom: 20px;
+  }
+  .about-section {
+    padding-top: 75px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .about-stamp {
+    align-self: flex-end;
+    width: 119px;
+    height: 119px;
+    margin-bottom: -9px;
+  }
+  .about-copy h2 {
+    font-size: 39px;
+  }
+  .about-aside {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .aside-credit {
+    margin: 0 0 0 45px;
+  }
+  .contact-inner {
+    min-height: 0;
+    padding-top: 66px;
+    padding-bottom: 56px;
+    display: block;
+  }
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-reason {
+    grid-column: auto;
+  }
+  .contact-main h2 {
+    font-size: 65px;
+  }
+  .contact-side {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .contact-watermark {
+    top: 25%;
+    right: 5%;
+    font-size: 18px;
+  }
+  .site-footer {
+    height: auto;
+    min-height: 72px;
+    padding: 17px 6%;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .site-footer > span {
+    font-size: 7px;
+  }
+  .site-footer > span:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 58px;
+  }
+  .eyebrow {
+    font-size: 8px;
+  }
+  .hero-actions {
+    gap: 15px;
+  }
+  .button {
+    gap: 11px;
+    padding: 0 12px;
+  }
+  .text-link {
+    font-size: 10px;
+  }
+  .detail-bottomline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contact-main h2 {
+    font-size: 58px;
+  }
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+  .experience-date {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px 13px;
+  }
+  .education-inner {
+    grid-template-columns: 1fr;
+  }
+  .education-inner .eyebrow {
+    grid-column: auto;
+  }
+  .education-date {
+    margin-top: 2px;
+  }
+  .ai-copy h2 {
+    font-size: 43px;
+  }
+  .ai-console-topline {
+    font-size: 8px;
+  }
+  .ai-prompts button {
+    font-size: 8px;
+  }
+}

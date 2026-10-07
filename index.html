@@ -15,8 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="Script.js" defer></script>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/responsive-wide.css" />
+    <link rel="stylesheet" href="css/responsive-tablet.css" />
+    <link rel="stylesheet" href="css/responsive-mobile.css" />
+    <link rel="stylesheet" href="css/accessibility.css" />
+    <script src="js/portfolio.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -42,7 +46,7 @@
           <a href="#about">About me</a>
           <a
             class="nav-download"
-            href="ADITYA_KADEPURE_CV.pdf"
+            href="assets/documents/ADITYA_KADEPURE_CV.pdf"
             download="ADITYA_KADEPURE_CV.pdf"
             >Download resume &amp; CV <span aria-hidden="true">↓</span></a
           >
@@ -360,7 +364,7 @@
                 aria-label="Discuss the Chhatrapati Shivray Marathi Sahitya Sanskriti Mandal website"
               >
                 <img
-                  src="assets/project-1-poster.png"
+                  src="assets/images/project-1-poster.png"
                   alt="Poster for Chhatrapati Shivray Marathi Sahitya Sanskriti Mandal featuring an illustrated portrait of Chhatrapati Shivaji Maharaj"
                   loading="lazy"
                 />
@@ -423,7 +427,11 @@
               </p>
               <div class="tag-row">
                 <span>HTML5</span><span>CSS3</span><span>JavaScript</span
-                ><span>Bootstrap</span><span>Node.js</span><span>MySql</span><span>RestApi's</span><span>React.js</span><span>Prisma ORM</span><span>Hostinger</span><span>Git</span
+                ><span>Bootstrap</span><span>Node.js</span><span>MySql</span><span>RestApi's</span><span> Express.js</span>
+                <span>React.js</span><span>Prisma ORM</span>
+                <span>Hostinger</span>
+                
+                <span>Git</span
                 ><span>GitHub</span>
               </div>
             </article>
@@ -721,6 +729,15 @@
               </p>
               <span class="contact-coordinate">PHONE</span>
               <p><a href="tel:+917353758627">+91 73537 58627</a></p>
+              <span class="contact-coordinate">CANDIDATE ID / GITHUB</span>
+              <p>
+                <a
+                  href="https://github.com/Adit-1716"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Adit-1716</a
+                >
+              </p>
               <a href="#top" class="back-top"
                 >BACK TO THE TOP <span aria-hidden="true">↑</span></a
               >
@@ -736,7 +753,7 @@
         <a class="footer-mark" href="#top">Aditya <span>Kadepure</span></a
         ><a
           class="footer-download"
-          href="ADITYA_KADEPURE_CV.pdf"
+          href="assets/documents/ADITYA_KADEPURE_CV.pdf"
           download="ADITYA_KADEPURE_CV.pdf"
           >Download resume &amp; CV <span aria-hidden="true">↓</span></a
         ><span>PYTHON FULL STACK / WEB DEVELOPMENT / DATA TOOLS</span
@@ -753,7 +770,7 @@
         hidden
       >
         <header class="chatbot-header">
-          <span class="chatbot-avatar" aria-hidden="true">✳</span>
+          <span class="chatbot-avatar" aria-hidden="true">AK</span>
           <div class="chatbot-heading">
             <span>ADITYA / PORTFOLIO GUIDE</span>
             <h2 id="chatbot-title">Portfolio agent</h2>
@@ -780,12 +797,25 @@
           >
             <span class="ai-speaker">AGENT / 01</span>
             <p>
-              Hi. Ask about Aditya’s profile, skills, projects, experience,
-              education, or contact details listed on this website. I won’t
-              guess information the portfolio doesn’t include.
+              Hi! I am the Aditya Kadepure Portfolio Guide. Ask me anything strictly about this portfolio website—such as Candidate Profile, First Name, Last Name, Middle Name, Technical Skills, Projects, Experience, Education, or Contact Details.
             </p>
           </div>
           <div class="ai-prompts" aria-label="Suggested questions">
+            <button type="button" data-prompt="Candidate Profile">
+              Candidate Profile
+            </button>
+            <button type="button" data-prompt="Shortlist">
+              Shortlist
+            </button>
+            <button type="button" data-prompt="Talent Pool">
+              Talent Pool
+            </button>
+            <button type="button" data-prompt="First Name">
+              First Name
+            </button>
+            <button type="button" data-prompt="Last Name">
+              Last Name
+            </button>
             <button type="button" data-prompt="Tell me about my technical skills">
               Technical skills
             </button>
@@ -815,8 +845,8 @@
             <button type="submit" aria-label="Send question">↗</button>
           </div>
           <p class="ai-disclaimer">
-            Answers use information listed on this portfolio website only.
-            Unlisted details are not guessed, and no prompt leaves this page.
+            Strictly portfolio-related answers. Unlisted details outside this
+            portfolio are not answered, and all queries run locally.
           </p>
         </form>
       </section>
