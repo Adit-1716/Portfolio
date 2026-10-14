@@ -269,6 +269,355 @@ function portfolioExperience() {
   });
 }
 
+const hrCoreCompetencies = {
+  expertiseIn: [
+    "Python Full-Stack Development (Frontend & Backend integration, application architecture, API development)",
+    "RESTful API Architecture, Endpoint Design, Integration & Testing",
+    "Responsive Web Design, Mobile-First Interface Development & Cross-Device Compatibility",
+  ],
+  proficiencyIn: [
+    "React.js & Modern Component-Driven User Interfaces",
+    "Django & Flask Backend Web Frameworks",
+    "Relational Database Management & SQL Query Optimization (MySQL, PostgreSQL)",
+    "Modern JavaScript (ES6+), Semantic HTML5 & Responsive CSS3",
+  ],
+  skilledAt: [
+    "Node.js Runtime & Express Server Development",
+    "Utility & Component CSS Frameworks (Tailwind CSS, Bootstrap, Bulma, Foundation)",
+    "Data Analysis, Cleaning & Numerical Computing (Pandas, NumPy, Matplotlib, Seaborn)",
+    "NoSQL Database Schema Design (MongoDB / MERN Stack)",
+    "Version Control & Code Collaboration Workflows (Git, GitHub, GitLab)",
+    "REST API Testing, Headers & Payload Validation with Postman",
+    "Database ORM & Migrations with Prisma ORM",
+  ],
+  advancedKnowledgeOf: [
+    "Full-Stack Web Application Lifecycle (UI, API Layer, Data Persistence, Testing, Deployment)",
+    "Database Schema Modeling, Relational Integrity & Performance Tuning",
+    "Business Intelligence, KPI Dashboards & Spreadsheet Analysis (Power BI, Microsoft Excel, Qlik Sense)",
+    "Cloud Infrastructure, Web Hosting & Deployment (AWS, ServiceNow, Hostinger)",
+    "AI-Assisted Developer Tooling & Productivity (Cursor AI, Claude Code, GitHub Copilot)",
+  ],
+};
+
+const hrToolsDatabase = [
+  {
+    name: "Python",
+    pattern: /\bpython(?:3)?\b/i,
+    category: "Programming Language (Core Full-Stack)",
+    competency: "Expertise in",
+    specialtyKey: "Languages",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd (Python Full Stack Developer): Developed end-to-end web applications, managed frontend and backend logic with Python, implemented database layers, API integrations, testing, and deployment.",
+      "Data Science & Analytics: Applied Python for numerical computing, data transformations, and exploratory data analysis using Pandas and NumPy.",
+    ],
+    complementary: "Django, Flask, Pandas, NumPy, MySQL, PostgreSQL, REST APIs, Git",
+  },
+  {
+    name: "JavaScript (ES6+)",
+    pattern: /\b(?:javascript|js|es6\+?)\b/i,
+    category: "Programming Language (Web & Full-Stack)",
+    competency: "Proficiency in",
+    specialtyKey: "Languages",
+    applied: [
+      "Zidio Development Company: Engineered dynamic, responsive frontend web interfaces with React, modern JavaScript (ES6+), HTML, and CSS.",
+      "Inno-I Inventory Management System & Chhatrapati Trust Website: Core client-side interactions, event handling, asynchronous HTTP requests, and server scripting.",
+    ],
+    complementary: "React.js, Node.js, Express, REST APIs, HTML5, CSS3",
+  },
+  {
+    name: "React.js",
+    pattern: /\breact(?:\.js)?\b/i,
+    category: "Frontend Framework / UI Library",
+    competency: "Proficiency in",
+    specialtyKey: "Frontend",
+    applied: [
+      "Zidio Development Company: Built modular, reusable frontend components, stateful UI views, and responsive web pages.",
+      "Inno-I Inventory Management System: Real-time UI for stock tracking, inventory levels, and transaction management.",
+    ],
+    complementary: "JavaScript (ES6+), Tailwind CSS, Bootstrap, REST APIs, Node.js",
+  },
+  {
+    name: "Django",
+    pattern: /\bdjango\b/i,
+    category: "Backend Web Framework (Python)",
+    competency: "Proficiency in",
+    specialtyKey: "Backend",
+    applied: [
+      "Architected secure, scalable Python backend applications, ORM data models, user authentication, and high-performance RESTful APIs.",
+    ],
+    complementary: "Python, REST APIs, MySQL, PostgreSQL, Postman",
+  },
+  {
+    name: "Flask",
+    pattern: /\bflask\b/i,
+    category: "Micro Web Framework (Python)",
+    competency: "Skilled at",
+    specialtyKey: "Backend",
+    applied: [
+      "Engineered lightweight Python web services, modular backend microservices, and rapid REST API prototyping.",
+    ],
+    complementary: "Python, REST APIs, Postman, SQL",
+  },
+  {
+    name: "Node.js & Express",
+    pattern: /\b(?:node(?:\.js)?|express(?:\.js)?|mern(?:\s+stack)?)\b/i,
+    category: "Backend Runtime & Framework",
+    competency: "Skilled at",
+    specialtyKey: "Backend",
+    applied: [
+      "Inno-I Inventory Management System: Asynchronous backend server, REST API routing, inventory CRUD operations, and Prisma ORM database connection.",
+    ],
+    complementary: "JavaScript (ES6+), Express.js, MySQL, MongoDB, REST APIs, Prisma ORM",
+  },
+  {
+    name: "REST APIs",
+    pattern: /\b(?:rest(?:ful)?[\s-_]*apis?|apis?[\s-_]*integration)\b/i,
+    category: "Web Service Architecture & Integration",
+    competency: "Expertise in",
+    specialtyKey: "Backend",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd: Engineered API integrations between frontend UI and Python backend services.",
+      "Inno-I Project: Designed, developed, and tested complete RESTful endpoints for real-time inventory updates and reporting.",
+    ],
+    complementary: "Postman, JSON, Django, Flask, Node.js, Python",
+  },
+  {
+    name: "SQL & PL/SQL",
+    pattern: /\b(?:sql|pl\/sql)\b/i,
+    category: "Database Query Language",
+    competency: "Proficiency in",
+    specialtyKey: "Databases",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd: Wrote queries for database management, data validation, and backend service integration.",
+      "Relational schema modeling, multi-table joins, subqueries, grouping, indexes, and transactional data integrity.",
+    ],
+    complementary: "MySQL, PostgreSQL, Prisma ORM, Python",
+  },
+  {
+    name: "MySQL",
+    pattern: /\bmysql\b/i,
+    category: "Relational Database Management System (RDBMS)",
+    competency: "Proficiency in",
+    specialtyKey: "Databases",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd: Relational database management, tables, and API data synchronization.",
+      "Inno-I Inventory Management System: Structured relational schema for inventory records, stock adjustments, and audit trails.",
+    ],
+    complementary: "SQL, Prisma ORM, Node.js, Python",
+  },
+  {
+    name: "PostgreSQL",
+    pattern: /\bpostgres(?:ql)?\b/i,
+    category: "Enterprise Relational Database (RDBMS)",
+    competency: "Proficiency in",
+    specialtyKey: "Databases",
+    applied: [
+      "Designed normalized relational database schemas, foreign keys, transactions, and backend data persistence.",
+    ],
+    complementary: "SQL, Python, Django, REST APIs",
+  },
+  {
+    name: "MongoDB",
+    pattern: /\bmongo(?:db)?\b/i,
+    category: "NoSQL Document Database",
+    competency: "Skilled at",
+    specialtyKey: "Databases",
+    applied: [
+      "MERN stack development, JSON-like document modeling, collection indexing, and flexible data schemas.",
+    ],
+    complementary: "Node.js, Express, React.js, REST APIs",
+  },
+  {
+    name: "Prisma ORM",
+    pattern: /\bprisma(?:\s*orm)?\b/i,
+    category: "Next-Gen Database ORM / Data Layer",
+    competency: "Skilled at",
+    specialtyKey: "Backend",
+    applied: [
+      "Inno-I Inventory Management System: Utilized Prisma ORM for type-safe database queries, schema migrations, and MySQL integration.",
+    ],
+    complementary: "Node.js, MySQL, REST APIs, JavaScript",
+  },
+  {
+    name: "HTML5 & CSS3",
+    pattern: /\b(?:html5?|css3?)\b/i,
+    category: "Core Web Markup & Styling",
+    competency: "Expertise in",
+    specialtyKey: "Languages",
+    applied: [
+      "Zidio Development Company, Shri Channabasaveshwar Gurukul, Inno-I System, and Chhatrapati Trust website.",
+      "Modern CSS Flexbox, Grid, semantic HTML, cross-browser support, and accessibility.",
+    ],
+    complementary: "Responsive Web Design, Tailwind CSS, Bootstrap, JavaScript",
+  },
+  {
+    name: "Tailwind CSS",
+    pattern: /\btailwind(?:\s*css)?\b/i,
+    category: "Utility-First CSS Framework",
+    competency: "Skilled at",
+    specialtyKey: "Frontend",
+    applied: [
+      "Zidio Development Company: Crafted modern, responsive, mobile-first layouts and component designs alongside React.js.",
+    ],
+    complementary: "React.js, HTML5, CSS3, JavaScript",
+  },
+  {
+    name: "Bootstrap",
+    pattern: /\bbootstrap\b/i,
+    category: "Responsive CSS Framework",
+    competency: "Skilled at",
+    specialtyKey: "Frontend",
+    applied: [
+      "Zidio Development Company, Chhatrapati Shivray Mandal website, and Inno-I Inventory project.",
+    ],
+    complementary: "HTML5, CSS3, JavaScript, jQuery",
+  },
+  {
+    name: "Responsive Web Design (RWD)",
+    pattern: /\bresponsive(?:\s+web)?(?:\s+design)?\b/i,
+    category: "Frontend UI Architecture",
+    competency: "Expertise in",
+    specialtyKey: "Frontend",
+    applied: [
+      "Implemented mobile-first, responsive web layouts across all client and live projects (Inno-I, Chhatrapati Trust, Zidio).",
+    ],
+    complementary: "CSS Media Queries, Flexbox, CSS Grid, Tailwind CSS, Bootstrap",
+  },
+  {
+    name: "Pandas & NumPy",
+    pattern: /\b(?:pandas|numpy|matplotlib|seaborn)\b/i,
+    category: "Data Science & Numerical Computing",
+    competency: "Skilled at",
+    specialtyKey: "Data Science",
+    applied: [
+      "Applied Pandas and NumPy for tabular data manipulation, data cleaning, validation, aggregation, and analytical computations.",
+    ],
+    complementary: "Python, Jupyter Notebook, Google Colab, Data Analytics",
+  },
+  {
+    name: "Power BI",
+    pattern: /\bpower[\s-_]*bi\b/i,
+    category: "Business Intelligence & Visualization Tool",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Analytics",
+    applied: [
+      "Constructed interactive BI dashboards, KPI tracking metrics, DAX measures, and visual business reporting.",
+    ],
+    complementary: "Microsoft Excel, SQL, Data Analytics, Reporting",
+  },
+  {
+    name: "Microsoft Excel & Google Sheets",
+    pattern: /\b(?:excel|google[\s-_]*sheets?|spreadsheets?)\b/i,
+    category: "Spreadsheet & Business Analysis",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Analytics",
+    applied: [
+      "Formulas, VLOOKUP/XLOOKUP, Pivot Tables, summary reporting, data validation, and financial calculations.",
+    ],
+    complementary: "Power BI, CSV, SQL",
+  },
+  {
+    name: "Qlik Sense & Qlik View",
+    pattern: /\bqlik(?:[\s-_]*sense|[\s-_]*view)?\b/i,
+    category: "Business Intelligence & Analytics Platform",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Analytics",
+    applied: [
+      "Associative data model exploration, KPI dashboards, and analytics applications.",
+    ],
+    complementary: "Power BI, SQL, Data Analytics",
+  },
+  {
+    name: "AWS (Amazon Web Services)",
+    pattern: /\b(?:aws|amazon[\s-_]*web[\s-_]*services)\b/i,
+    category: "Cloud Computing Platform",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Platforms",
+    applied: [
+      "Cloud platform knowledge for deploying web applications, cloud hosting, and compute/storage infrastructure.",
+    ],
+    complementary: "Python, Linux, Web Applications, Git",
+  },
+  {
+    name: "ServiceNow",
+    pattern: /\bservicenow\b/i,
+    category: "Enterprise Cloud & Workflow Platform",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Platforms",
+    applied: [
+      "Enterprise cloud workflow management and IT service management listed in CV.",
+    ],
+    complementary: "Enterprise Systems, Cloud Platforms",
+  },
+  {
+    name: "Hostinger",
+    pattern: /\bhostinger\b/i,
+    category: "Web Hosting & Cloud Deployment",
+    competency: "Skilled at",
+    specialtyKey: "Platforms",
+    applied: [
+      "Production deployment and hosting for Inno-I Inventory Management System and Chhatrapati Shivray Mandal web platform.",
+    ],
+    complementary: "Git, GitHub, Web Hosting, DNS",
+  },
+  {
+    name: "Git, GitHub & GitLab",
+    pattern: /\b(?:git|github|gitlab|version[\s-_]*control)\b/i,
+    category: "Version Control & Code Collaboration",
+    competency: "Skilled at",
+    specialtyKey: "Tools",
+    applied: [
+      "Daily version control, branching strategies, commits, pull requests, and team code reviews across all roles.",
+      "Public GitHub profile: https://github.com/Adit-1716",
+    ],
+    complementary: "VS Code, Terminal, Git Flow",
+  },
+  {
+    name: "Postman",
+    pattern: /\bpostman\b/i,
+    category: "API Testing & Development Tool",
+    competency: "Skilled at",
+    specialtyKey: "Tools",
+    applied: [
+      "REST API endpoint testing, HTTP method verification (GET/POST/PUT/DELETE), header validation, JSON payload inspection, and API debugging.",
+    ],
+    complementary: "REST APIs, Django, Flask, Node.js, JSON",
+  },
+  {
+    name: "VS Code & Sublime Text",
+    pattern: /\b(?:vs[\s-_]*code|visual[\s-_]*studio[\s-_]*code|sublime(?:\s*text)?)\b/i,
+    category: "Code Editors & IDEs",
+    competency: "Skilled at",
+    specialtyKey: "Tools",
+    applied: [
+      "Primary code editing environments, terminal integration, debugging, and linting for Python, React, and SQL projects.",
+    ],
+    complementary: "Git, Extensions, Python, JavaScript",
+  },
+  {
+    name: "Jupyter Notebook & Google Colab",
+    pattern: /\b(?:jupyter(?:[\s-_]*notebook)?|google[\s-_]*colab|colab)\b/i,
+    category: "Interactive Computing & Notebooks",
+    competency: "Skilled at",
+    specialtyKey: "Tools",
+    applied: [
+      "Data analysis pipelines, step-by-step code execution, and data validation with Pandas and NumPy.",
+    ],
+    complementary: "Python, Pandas, NumPy, Data Analytics",
+  },
+  {
+    name: "Cursor AI, Claude Code & Copilot",
+    pattern: /\b(?:cursor(?:\s*ai)?|claude(?:\s*code)?|copilot|ai[\s-_]*tools?)\b/i,
+    category: "AI-Assisted Developer Productivity Tools",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Tools",
+    applied: [
+      "AI-augmented engineering workflows for rapid code refactoring, test scaffolding, documentation, and architecture optimization.",
+    ],
+    complementary: "VS Code, Git, Full-Stack Architecture",
+  },
+];
+
 function runPortfolioAgent(question) {
   const rawQuestion = (question ?? "").trim();
   const cleanQuestion = rawQuestion.replace(/^[\s•*–—\->#.]+/g, "").trim();
@@ -366,7 +715,7 @@ function runPortfolioAgent(question) {
   if (matchesMiddleName) {
     return {
       action: "CANDIDATE MIDDLE NAME",
-      answer: `• Middle Name / Middle Initial: ${candidateInfo.middleName}\nAditya Kadepure does not have a middle name or middle initial listed in his official portfolio and CV records.`,
+      answer: `• Middle Name / Middle Initial: ${candidateInfo.middleName}\n(Full Name: Aditya Ganesh Kadepure).`,
     };
   }
 
@@ -394,6 +743,20 @@ function runPortfolioAgent(question) {
     return {
       action: "CANDIDATE FULL NAME",
       answer: `• Full Name: ${candidateInfo.fullName}\n(First Name: ${candidateInfo.firstName}, Last Name: ${candidateInfo.lastName}).`,
+    };
+  }
+
+  // 5. Employee Number / ID Inquiry
+  const matchesEmployeeId =
+    /\b(employee[\s-_]*(?:number|no\.?|id|code)|candidate[\s-_]*(?:id|number|no\.?|code)|applicant[\s-_]*(?:id|number|no\.?)|emp[\s-_]*(?:id|no\.?|number)|portfolio[\s-_]*id|id[\s-_]*number|employee\s*(?:\/|or)\s*id|employee\s*id|adit-?1716)\b/i.test(
+      normalizedQuestion,
+    ) || /\b(?:your|his|the|candidate\'?s?|employee\'?s?)?\s*id\b/i.test(cleanQuestion);
+
+  if (matchesEmployeeId) {
+    return {
+      action: "EMPLOYEE ID NOT APPLICABLE",
+      answer:
+        "Employee ID is not listed or applicable on this portfolio. Aditya Kadepure is an independent full-stack developer and candidate, so no corporate or employee identification number is used.",
     };
   }
 
@@ -526,7 +889,7 @@ function runPortfolioAgent(question) {
   if (hasIntent(/^(hi|hello|hey|greetings|good (morning|afternoon|evening)|help)\b/)) {
     return {
       action: "PORTFOLIO GUIDE / READY",
-      answer: `Hello! I am Aditya Kadepure's Portfolio Guide, trained exclusively on the contents of this portfolio website.\n\nYou can ask me directly about:\n• First Name, Last Name, Middle Name, Full Name\n• Candidate Profile\n• Applicant Name, Candidate Roster, Shortlist & Talent Pool\n• Job Seeker Status & Career Aspirations\n• Technical Skills & Tech Stack\n• Selected Projects (Inno-I, Chhatrapati Shivray Mandal)\n• Professional Experience & Work History\n• Education (BCA) & Resume / CV\n• Contact Details & Location\n\nHow can I help you explore Aditya's portfolio?`,
+      answer: `Hello! I am Aditya Kadepure's Portfolio Guide, trained exclusively on the contents of this portfolio website.\n\nYou can ask me directly about:\n• Core Competencies ("Expertise in", "Proficiency in", "Skilled at", "Advanced knowledge of")\n• Exact Tool Names, Programming Languages & Technical Frameworks\n• First Name, Last Name, Middle Name, Full Name\n• Candidate Profile, Shortlist, Talent Pool & Candidate Roster\n• Job Seeker Status & Career Aspirations\n• Selected Projects (Inno-I, Chhatrapati Shivray Mandal)\n• Professional Work Experience & Education (BCA)\n• Contact Details & Location\n\nHow can I help you explore Aditya's portfolio?`,
     };
   }
 
@@ -635,6 +998,244 @@ function runPortfolioAgent(question) {
     };
   }
 
+  // --- HR & Recruiter Technical Screening & Competency Matching ---
+
+  // A. Core Competencies Matrix & Tiers
+  const matchesCoreCompetencies =
+    /\b(core[\s-_]*competenc(?:ies|y)|competenc(?:ies|y)|key[\s-_]*competenc(?:ies|y)|competency[\s-_]*matrix)\b/i.test(
+      normalizedQuestion,
+    );
+  const matchesExpertiseIn = /\bexpertise\s+in\b/i.test(normalizedQuestion);
+  const matchesProficiencyIn = /\bproficiency\s+in\b/i.test(normalizedQuestion);
+  const matchesSkilledAt = /\bskilled\s+at\b/i.test(normalizedQuestion);
+  const matchesAdvancedKnowledge =
+    /\badvanced\s+knowledge(?:\s+of)?\b/i.test(normalizedQuestion);
+
+  if (
+    matchesCoreCompetencies ||
+    matchesExpertiseIn ||
+    matchesProficiencyIn ||
+    matchesSkilledAt ||
+    matchesAdvancedKnowledge
+  ) {
+    atlasSection?.scrollIntoView({ behavior: "smooth" });
+
+    if (matchesExpertiseIn && !matchesCoreCompetencies) {
+      return {
+        action: "HR / CORE COMPETENCIES (EXPERTISE IN)",
+        answer: `Aditya Kadepure — Core Competencies ("Expertise in"):
+${hrCoreCompetencies.expertiseIn.map((item) => `• ${item}`).join("\n")}
+
+(Verified across production applications at EPA Cybernest Solutions, live Inno-I system, and full-stack web builds).`,
+      };
+    }
+    if (matchesProficiencyIn && !matchesCoreCompetencies) {
+      return {
+        action: "HR / CORE COMPETENCIES (PROFICIENCY IN)",
+        answer: `Aditya Kadepure — Core Competencies ("Proficiency in"):
+${hrCoreCompetencies.proficiencyIn.map((item) => `• ${item}`).join("\n")}
+
+(Demonstrated across React.js frontends at Zidio Development and Django/SQL backends).`,
+      };
+    }
+    if (matchesSkilledAt && !matchesCoreCompetencies) {
+      return {
+        action: "HR / CORE COMPETENCIES (SKILLED AT)",
+        answer: `Aditya Kadepure — Core Competencies ("Skilled at"):
+${hrCoreCompetencies.skilledAt.map((item) => `• ${item}`).join("\n")}
+
+(Applied in Node.js/Prisma backend logic for Inno-I, Tailwind/Bootstrap UIs, and Pandas/NumPy data processing).`,
+      };
+    }
+    if (matchesAdvancedKnowledge && !matchesCoreCompetencies) {
+      return {
+        action: "HR / CORE COMPETENCIES (ADVANCED KNOWLEDGE OF)",
+        answer: `Aditya Kadepure — Core Competencies ("Advanced knowledge of"):
+${hrCoreCompetencies.advancedKnowledgeOf.map((item) => `• ${item}`).join("\n")}
+
+(Applied across complete software delivery, Power BI reporting, and AWS/Hostinger deployments).`,
+      };
+    }
+
+    return {
+      action: "HR / CORE COMPETENCIES MATRIX",
+      answer: `Aditya Kadepure — Core Technical Competencies (HR & Recruiter Matrix):
+
+• Expertise in:
+${hrCoreCompetencies.expertiseIn.map((item) => `  - ${item}`).join("\n")}
+
+• Proficiency in:
+${hrCoreCompetencies.proficiencyIn.map((item) => `  - ${item}`).join("\n")}
+
+• Skilled at:
+${hrCoreCompetencies.skilledAt.map((item) => `  - ${item}`).join("\n")}
+
+• Advanced knowledge of:
+${hrCoreCompetencies.advancedKnowledgeOf.map((item) => `  - ${item}`).join("\n")}
+
+(All competencies are grounded in Aditya's production work at EPA Cybernest, Zidio Development, and live projects).`,
+    };
+  }
+
+  // B. Technical Frameworks Query
+  const matchesTechnicalFrameworks =
+    /\b(technical[\s-_]*frameworks?|web[\s-_]*frameworks?|backend[\s-_]*frameworks?|frontend[\s-_]*frameworks?|frameworks?\s*(?:used|known|required|list)|what\s+frameworks|which\s+frameworks)\b/i.test(
+      normalizedQuestion,
+    );
+
+  if (matchesTechnicalFrameworks) {
+    atlasSection?.scrollIntoView({ behavior: "smooth" });
+    selectSpecialty("Backend");
+    return {
+      action: "HR / TECHNICAL FRAMEWORKS",
+      answer: `Aditya Kadepure — Verified Technical Frameworks (HR Reference):
+
+• Backend Web Frameworks:
+  - Django (Proficiency in): High-level Python framework for scalable, secure backend systems & REST APIs.
+  - Flask (Skilled at): Modular Python micro-framework for microservices and lightweight APIs.
+  - Node.js & Express (Skilled at): Asynchronous JavaScript runtime for server-side logic and RESTful services.
+  - Prisma ORM (Skilled at): Schema modeling, migrations, and type-safe database access used in Inno-I.
+
+• Frontend & UI Frameworks:
+  - React.js (Proficiency in): Component-driven SPA architecture, interactive state management, and modern hooks.
+  - Tailwind CSS (Skilled at): Utility-first styling for custom responsive web layouts.
+  - Bootstrap (Skilled at): Responsive grid system, UI components, and cross-browser styling.
+  - Bulma & Foundation CSS (Skilled at): Flexbox-based responsive interfaces.
+  - jQuery.js (Skilled at): DOM manipulation and web application maintenance.
+
+• API & Architecture:
+  - RESTful APIs (Expertise in): End-to-end design, HTTP status codes, JSON exchange, and integration.
+  - MERN Stack (Skilled at): Full-stack JavaScript development combining MongoDB, Express, React, and Node.js.`,
+    };
+  }
+
+  // C. Programming Languages Query
+  const matchesProgrammingLanguages =
+    /\b(programming[\s-_]*languages?|coding[\s-_]*languages?|languages?\s*(?:known|used|required|list)|what\s+languages|which\s+languages)\b/i.test(
+      normalizedQuestion,
+    );
+
+  if (matchesProgrammingLanguages) {
+    atlasSection?.scrollIntoView({ behavior: "smooth" });
+    selectSpecialty("Languages");
+    return {
+      action: "HR / PROGRAMMING LANGUAGES",
+      answer: `Aditya Kadepure — Verified Programming Languages (HR Reference):
+
+• Python (Expertise in): Primary language for Full-Stack development, backend services at EPA Cybernest Solutions, and Data Science (Pandas/NumPy).
+• JavaScript / ES6+ (Proficiency in): Dynamic frontend logic (React.js), backend scripts (Node.js), and interactive web components.
+• SQL & PL/SQL (Proficiency in): Relational database queries, schema design, transactions, and indexing across MySQL & PostgreSQL.
+• HTML5 (Expertise in): Semantic markup, web accessibility, and structured document standards.
+• CSS3 (Expertise in): Flexbox, CSS Grid, media queries, animations, and responsive mobile-first styling.`,
+    };
+  }
+
+  // D. Developer Tools & Exact Tool Names Query
+  const matchesExactTools =
+    /\b(exact[\s-_]*tool[\s-_]*names?|developer[\s-_]*tools?|tools?\s*(?:used|required|stack|list)|what\s+tools|which\s+tools|tools?\s*(?:and|&)\s*platforms?)\b/i.test(
+      normalizedQuestion,
+    );
+
+  if (matchesExactTools) {
+    atlasSection?.scrollIntoView({ behavior: "smooth" });
+    selectSpecialty("Tools");
+    return {
+      action: "HR / DEVELOPER TOOLS & PLATFORMS",
+      answer: `Aditya Kadepure — Verified Developer Tools & Platforms (HR Reference):
+
+• Version Control & Collaboration: Git, GitHub, GitLab (Daily commits, branching, PRs, code reviews; profile: https://github.com/Adit-1716).
+• API Testing & Development: Postman (Endpoint verification, headers, JSON payloads, environment variables).
+• Code Editors & IDEs: VS Code (Visual Studio Code), Sublime Text.
+• Interactive Computing & Notebooks: Jupyter Notebook, Google Colab (Data exploration with Pandas/NumPy).
+• Cloud & Hosting Platforms: AWS (Cloud deployment & hosting), ServiceNow (Enterprise platform), Hostinger (Production deployment for Inno-I and Chhatrapati Trust).
+• Database Tools: MySQL Workbench, pgAdmin, MongoDB Compass.
+• AI-Assisted Developer Tooling: Cursor AI, Claude Code, GitHub Copilot (Workflow acceleration, code refactoring, test drafting).`,
+    };
+  }
+
+  // E. HR Screening & Job Requirements Match
+  const matchesHrScreening =
+    /\b(hr[\s-_]*(?:search|screening|vetting|inquiry)|skills?[\s-_]*required(?:\s+for\s+the\s+job)?|job[\s-_]*requirements?|tech(?:nical)?[\s-_]*stack[\s-_]*(?:match|requirements?)|skills?[\s-_]*match|hiring[\s-_]*requirements?)\b/i.test(
+      normalizedQuestion,
+    );
+
+  if (matchesHrScreening) {
+    aboutSection?.scrollIntoView({ behavior: "smooth" });
+    return {
+      action: "HR / JOB REQUIREMENTS MATCH",
+      answer: `Aditya Kadepure — HR Screening & Technical Match Summary:
+
+• Candidate: Aditya Kadepure
+• Target Roles: Python Full-Stack Developer / Backend Developer / Frontend Developer (React)
+• Status: Available for hire / Active applicant (${candidateInfo.location} · Remote / Hybrid)
+
+• Core Competencies Breakdown:
+  - Expertise in: Python Full-Stack Development, RESTful API Architecture, Responsive Web Design.
+  - Proficiency in: React.js, Django, Flask, SQL & Relational Databases (MySQL, PostgreSQL), JavaScript (ES6+), HTML5/CSS3.
+  - Skilled at: Node.js/Express, Tailwind CSS, Bootstrap, Pandas, NumPy, MongoDB, Git/GitHub, Postman, Prisma ORM.
+  - Advanced knowledge of: Web Application Lifecycle, Database Schema Design, Power BI/Excel BI, AWS Cloud, AI Developer Tools (Cursor/Copilot).
+
+• Verified Experience:
+  - Python Full Stack Developer at EPA Cybernest Solutions Pvt Ltd (09/2026 – Present, Hyderabad)
+  - Web Developer at Zidio Development Company (12/2025 – 08/2026, Bangalore / Remote)
+  - Junior Web Developer at Shri Channabasaveshwar Gurukul (04/2024 – 11/2025, Bidar)
+
+• Contact for HR / Interview Scheduling: ${candidateInfo.email} | ${candidateInfo.phone}`,
+    };
+  }
+
+  // F. Unlisted Technology Inquiries (Provide clear recruiter verification)
+  const unlistedMatch = normalizedQuestion.match(
+    /\b(docker|kubernetes|k8s|java\b|c\+\+|c#|\.net|php\b|ruby\b|golang\b|go\s*lang|rust\b|swift\b|kotlin\b|angular|vue(?:\.js)?|svelte|graphql|tableau|salesforce|terraform|ansible|jenkins|azure|gcp|google\s*cloud)\b/i,
+  );
+
+  if (unlistedMatch) {
+    const unlistedToolName = unlistedMatch[0].toUpperCase();
+    return {
+      action: "HR / SKILL VERIFICATION NOTICE",
+      answer: `HR Skill Verification Assessment:
+
+• Tool Queried: ${unlistedToolName}
+• Verification Status: NOT listed on Aditya Kadepure's official portfolio or CV records.
+
+• Verified Core Tech Stack:
+  - Programming Languages: Python, JavaScript (ES6+), HTML5, CSS3, SQL, PL/SQL
+  - Technical Frameworks: React.js, Django, Flask, Node.js, Express, REST APIs, Tailwind CSS, Bootstrap, Prisma ORM
+  - Databases: MySQL, PostgreSQL, MongoDB
+  - Analytics & Cloud: Power BI, Pandas, NumPy, AWS, ServiceNow, Hostinger
+  - Developer Tools: Git, GitHub, GitLab, Postman, VS Code, Jupyter Notebook
+
+• Recruiter Note: Aditya has strong software engineering fundamentals and picks up complementary tools quickly based on team and stack requirements.`,
+    };
+  }
+
+  // G. Exact Individual Tool / Framework / Language Search (HR Matcher)
+  const matchedTool = hrToolsDatabase.find((tool) =>
+    tool.pattern.test(normalizedQuestion),
+  );
+
+  if (matchedTool) {
+    if (matchedTool.specialtyKey) {
+      selectSpecialty(matchedTool.specialtyKey);
+      atlasSection?.scrollIntoView({ behavior: "smooth" });
+    }
+    return {
+      action: `HR / VERIFIED TOOL (${matchedTool.name.toUpperCase()})`,
+      answer: `HR Skill Verification — ${matchedTool.name}:
+
+• Exact Tool / Framework: ${matchedTool.name}
+• Category: ${matchedTool.category}
+• Competency Rating: "${matchedTool.competency}"
+• Verification Status: VERIFIED IN PORTFOLIO & CV
+
+• Where Applied in Experience & Projects:
+${matchedTool.applied.map((bullet) => `  - ${bullet}`).join("\n")}
+
+• Complementary Tech Stack: ${matchedTool.complementary}
+• Candidate: ${candidateInfo.fullName} (Available for technical screening / interviews).`,
+    };
+  }
+
   // 15. Work / Projects Filter & Browse
   const specialty =
     specialties.find((item) =>
@@ -731,7 +1332,7 @@ function runPortfolioAgent(question) {
   // 20. Strict Out-of-Scope Fallback (Refuse anything not related to this portfolio)
   return {
     action: "PORTFOLIO-ONLY SCOPE",
-    answer: `I am the Aditya Kadepure Portfolio Guide, strictly trained to answer questions about this portfolio website only.\n\nI can only provide information on:\n• Candidate Profile & Summary\n• First Name (Aditya), Last Name (Kadepure), Middle Name (N/A)\n• Applicant Name, Candidate Roster, Shortlist & Talent Pool\n• Job Seeker Status & Career Aspirations\n• Technical Skills & Tech Stack\n• Selected Projects (Inno-I, Chhatrapati Mandal)\n• Professional Experience & Work History\n• Education (BCA) & Resume / CV\n• Contact Details & Location\n\nPlease ask a question related to Aditya Kadepure's portfolio!`,
+    answer: `I am the Aditya Kadepure Portfolio Guide, strictly trained to answer questions about this portfolio website only.\n\nI can provide verified information on:\n• Core Competencies ("Expertise in", "Proficiency in", "Skilled at", "Advanced knowledge of")\n• Exact Tool Names, Programming Languages & Technical Frameworks\n• Candidate Profile, Shortlist, Talent Pool & Candidate Roster\n• First Name (Aditya), Middle Name (Ganesh), Last Name (Kadepure)\n• Selected Projects (Inno-I, Chhatrapati Shivray Mandal)\n• Professional Work Experience & Education (BCA)\n• Contact Details & Location\n\nPlease ask a question related to Aditya Kadepure's portfolio!`,
   };
 }
 

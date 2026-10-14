@@ -20,7 +20,16 @@
     <link rel="stylesheet" href="css/responsive-tablet.css" />
     <link rel="stylesheet" href="css/responsive-mobile.css" />
     <link rel="stylesheet" href="css/accessibility.css" />
-    <script src="js/portfolio.js" defer></script>
+    <script type="module" src="js/main.js"></script>
+    <script>
+      // Fallback for file:// protocol where browsers restrict ES modules without a local server
+      if (window.location.protocol === "file:") {
+        const fallbackScript = document.createElement("script");
+        fallbackScript.src = "js/portfolio.bundle.js";
+        fallbackScript.defer = true;
+        document.head.appendChild(fallbackScript);
+      }
+    </script>
   </head>
   <body>
     <div class="page-shell">
@@ -96,7 +105,7 @@
               <div class="map-lines" aria-hidden="true">
                 <i class="line line-a"></i><i class="line line-b"></i
                 ><i class="line line-c"></i><i class="line line-d"></i
-                ><i class="line line-e"></i><i class="line line-f"></i
+                ><i iclass="line line-e"></i><i class="line line-f"></i
                 ><i class="line line-g"></i><i class="line line-h"></i>
               </div>
               <div class="map-center">
@@ -797,12 +806,24 @@
           >
             <span class="ai-speaker">AGENT / 01</span>
             <p>
-              Hi! I am the Aditya Kadepure Portfolio Guide. Ask me anything strictly about this portfolio website—such as Candidate Profile, First Name, Last Name, Middle Name, Technical Skills, Projects, Experience, Education, or Contact Details.
+              Hi! I am the Aditya Kadepure Portfolio Guide. Ask me anything strictly about this portfolio website—such as Candidate Profile, Core Competencies ("Expertise in", "Proficiency in", "Skilled at", "Advanced knowledge of"), exact tool names, programming languages, technical frameworks, projects, experience, or contact details.
             </p>
           </div>
           <div class="ai-prompts" aria-label="Suggested questions">
+            <button type="button" data-prompt="Core Competencies">
+              Core Competencies
+            </button>
             <button type="button" data-prompt="Candidate Profile">
               Candidate Profile
+            </button>
+            <button type="button" data-prompt="Technical Frameworks">
+              Frameworks
+            </button>
+            <button type="button" data-prompt="Programming Languages">
+              Languages
+            </button>
+            <button type="button" data-prompt="Developer Tools">
+              Tools &amp; Stack
             </button>
             <button type="button" data-prompt="Shortlist">
               Shortlist
@@ -810,14 +831,8 @@
             <button type="button" data-prompt="Talent Pool">
               Talent Pool
             </button>
-            <button type="button" data-prompt="First Name">
-              First Name
-            </button>
-            <button type="button" data-prompt="Last Name">
-              Last Name
-            </button>
             <button type="button" data-prompt="Tell me about my technical skills">
-              Technical skills
+              All Skills
             </button>
             <button
               type="button"
