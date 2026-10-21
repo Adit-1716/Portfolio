@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f8f5" />
+    <meta
+      name="description"
+      content="404 Page Not Found — Aditya Kadepure Full-Stack Developer Portfolio."
+    />
+    <title>404: Page Not Found — Aditya Kadepure Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="alternate icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/responsive-wide.css" />
+    <link rel="stylesheet" href="css/responsive-tablet.css" />
+    <link rel="stylesheet" href="css/responsive-mobile.css" />
+    <link rel="stylesheet" href="css/accessibility.css" />
+    <style>
+      .error-page-container {
+        min-height: calc(100vh - 82px - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 7.1%;
+        position: relative;
+        z-index: 2;
+      }
+      .error-card {
+        max-width: 680px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 2.5px solid var(--ink);
+        border-radius: var(--clay-radius-card);
+        padding: clamp(32px, 5vw, 56px);
+        box-shadow: 8px 8px 0px var(--ink), var(--clay-inset-light);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .error-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        background: var(--acid);
+        border: 2px solid var(--ink);
+        border-radius: var(--clay-radius-pill);
+        font: 600 11px var(--mono);
+        color: var(--ink);
+        box-shadow: 2px 2px 0px var(--ink);
+      }
+      .error-code {
+        font: 800 clamp(72px, 12vw, 120px)/0.9 var(--display);
+        letter-spacing: -4px;
+        color: var(--ink);
+        margin: 10px 0 0;
+      }
+      .error-code span {
+        color: var(--coral);
+      }
+      .error-title {
+        font: 700 clamp(22px, 3.5vw, 32px)/1.2 var(--display);
+        letter-spacing: -1px;
+        color: var(--ink);
+        margin: 0;
+      }
+      .error-description {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--muted);
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .error-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 12px;
+        width: 100%;
+      }
+      .error-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        width: 100%;
+        font: 11px var(--mono);
+      }
+      .error-links a {
+        color: var(--muted);
+        padding: 4px 8px;
+        transition: color 0.2s ease;
+      }
+      .error-links a:hover {
+        color: var(--blue);
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip to main content link for accessible tab order -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Ambient glowing orbs -->
+    <div class="ambient-orbs-container" aria-hidden="true">
+      <div class="ambient-orb orb-lime"></div>
+      <div class="ambient-orb orb-blue"></div>
+      <div class="ambient-orb orb-coral"></div>
+      <div class="ambient-orb orb-mint"></div>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <a class="wordmark" href="index.html#top" aria-label="Aditya Kadepure home">
+          Aditya <span>Kadepure</span>
+        </a>
+        <nav class="site-nav" style="display: flex;" aria-label="Quick navigation">
+          <a href="index.html#work">Projects</a>
+          <a href="index.html#atlas">Skills</a>
+          <a href="index.html#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <div class="error-page-container">
+          <div class="error-card">
+            <span class="error-badge">
+              <span class="live-dot" style="background: var(--coral);"></span>
+              HTTP 404 / ERROR STATUS
+            </span>
+            <h1 class="error-code">4<span>0</span>4</h1>
+            <h2 class="error-title">Page or Resource Not Found</h2>
+            <p class="error-description">
+              The page, project, or file you are looking for doesn’t exist or might have been relocated.
+              You can return to the portfolio home or jump directly to Aditya's verified work.
+            </p>
+            <div class="error-actions">
+              <a href="index.html" class="button button-dark">
+                <span>Return to Home</span> <span aria-hidden="true">↖</span>
+              </a>
+              <a href="index.html#work" class="button button-light">
+                <span>View Selected Projects</span> <span aria-hidden="true">↘</span>
+              </a>
+              <a href="index.html#contact" class="text-link">
+                <span>Get in touch</span> <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div class="error-links">
+              <span>Quick jump:</span>
+              <a href="index.html#work">Projects</a>
+              <a href="index.html#atlas">Technical Skills</a>
+              <a href="index.html#experience">Career History</a>
+              <a href="index.html#about">About</a>
+              <a href="assets/documents/ADITYA_KADEPURE_CV.pdf" download="ADITYA_KADEPURE_CV.pdf">Download CV (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <a class="footer-mark" href="index.html#top">Aditya <span>Kadepure</span></a>
+        <a
+          class="footer-download"
+          href="assets/documents/ADITYA_KADEPURE_CV.pdf"
+          download="ADITYA_KADEPURE_CV.pdf"
+        >Download resume &amp; CV <span aria-hidden="true">↓</span></a>
+        <span>PYTHON FULL STACK / WEB DEVELOPMENT / DATA TOOLS</span>
+        <span>© <span id="current-year">2026</span> ADITYA KADEPURE</span>
+      </footer>
+    </div>
+
+    <script>
+      // Update copyright year
+      const yearEl = document.querySelector("#current-year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

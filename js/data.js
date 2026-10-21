@@ -6,84 +6,101 @@
 export const specialtyContent = {
   Languages: {
     symbol: "{ }",
-    description: "Core programming and web languages listed in the CV.",
-    tags: ["Python", "JavaScript", "ES6+", "HTML5", "CSS3", "SQL"],
+    description: "Core programming and web markup languages verified in the CV.",
+    tags: ["Python", "JavaScript (ES6+)", "HTML5", "CSS3", "SQL", "PL/SQL"],
   },
   Backend: {
     symbol: "API",
-    description: "Backend frameworks, runtime, and web-service technologies.",
-    tags: ["Django", "Flask", "Node.js", "REST APIs"],
+    description: "Backend frameworks, REST API architecture, and test automation from CV.",
+    tags: [
+      "Django",
+      "Django REST Framework (DRF)",
+      "FastAPI",
+      "Flask",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Pytest",
+    ],
   },
   Frontend: {
     symbol: "UI",
-    description: "Frontend libraries, CSS frameworks, and responsive design.",
+    description: "Frontend libraries, CSS frameworks, and responsive design from CV.",
     tags: [
       "React.js",
-      "jQuery.js",
+      "jQuery",
       "Bootstrap",
       "Tailwind CSS",
       "Bulma",
-      "Foundation CSS",
+      "Foundation",
       "Responsive Web Design",
     ],
   },
   "Data Science": {
     symbol: "DS",
-    description: "Python libraries for numerical computing and data analysis.",
+    description: "Python libraries for numerical computing, data analysis, and visualization.",
     tags: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
   },
   Databases: {
     symbol: "SQL",
-    description: "Relational and document databases plus query languages.",
+    description: "Relational and document databases plus query languages from CV.",
     tags: ["MySQL", "PostgreSQL", "MongoDB", "SQL", "PL/SQL"],
   },
   Analytics: {
     symbol: "BI",
-    description: "Business-intelligence and spreadsheet tools listed in the CV.",
+    description: "Business intelligence dashboards, web analytics, and spreadsheets from CV.",
     tags: [
+      "Power BI",
+      "Google Analytics",
       "Microsoft Excel",
       "Google Sheets",
-      "Power BI",
       "Qlik Sense",
       "Qlik View",
     ],
   },
   Platforms: {
     symbol: "AWS",
-    description: "Cloud and enterprise platforms.",
-    tags: ["AWS", "ServiceNow"],
+    description: "Cloud infrastructure, containerization, CI/CD pipelines, and hosting from CV.",
+    tags: [
+      "AWS (EC2, S3, RDS, IAM)",
+      "GCP",
+      "Docker",
+      "GitHub Actions CI/CD",
+      "ServiceNow",
+      "Hostinger",
+    ],
   },
   Tools: {
     symbol: "DEV",
-    description: "Developer, collaboration, notebook, API, and coding-assistant tools.",
+    description: "Version control, AI coding assistance, API testing, and IDE tools from CV.",
     tags: [
-      "VS Code",
-      "Sublime",
-      "Jupyter Notebook",
-      "Google Colab",
-      "Postman",
       "Git",
       "GitHub",
       "GitLab",
       "Cursor AI",
       "Claude Code",
-      "Copilot",
+      "GitHub Copilot",
+      "Postman",
+      "VS Code",
+      "Sublime",
+      "Google Colab",
+      "Tag Manager",
     ],
   },
 };
 
 export const skillAliases = {
-  Languages: /\b(python|javascript|es6\+?|html5?|css3?)\b/,
-  Backend: /\b(django|flask|node(?:\.js)?|rest|apis?|mern|express)\b/,
+  Languages: /\b(python|javascript|es6\+?|html5?|css3?|sql|pl\/sql|programming languages?)\b/,
+  Backend: /\b(django|drf|django\s*rest\s*framework|fastapi|flask|node(?:\.js)?|express(?:\.js)?|rest|apis?|mern|pytest|backend)\b/,
   Frontend:
-    /\b(react(?:\.js)?|jquery(?:\.js)?|bootstrap|tailwind|bulma|foundation|responsive web design|frontend|front-end)\b/,
-  "Data Science": /\b(pandas|numpy|data science|data scientist)\b/,
+    /\b(react(?:\.js)?|jquery(?:\.js)?|bootstrap|tailwind|bulma|foundation|responsive web design|frontend|front-end|ui)\b/,
+  "Data Science": /\b(pandas|numpy|matplotlib|seaborn|data science|data scientist)\b/,
   Databases: /\b(mysql|postgres(?:ql)?|mongodb|mongo|sql|pl\/sql|database)s?\b/,
   Analytics:
-    /\b(analytics|analyst|analysis|excel|sheets|power bi|qlik(?: sense|view)?)\b/,
-  Platforms: /\b(aws|servicenow|cloud)\b/,
+    /\b(analytics|analyst|analysis|excel|sheets|power bi|qlik(?: sense|view)?|google analytics|bi tools?)\b/,
+  Platforms: /\b(aws|amazon web services|gcp|google cloud|docker|ci\/cd|github actions|servicenow|hostinger|cloud|platforms?)\b/,
   Tools:
-    /\b(vs code|visual studio code|sublime|jupyter|colab|postman|git|github|gitlab|cursor|claude code|copilot|ai tools?)\b/,
+    /\b(vs code|visual studio code|sublime|jupyter|colab|postman|git|github|gitlab|cursor|claude code|copilot|tag manager|ai tools?|developer tools?)\b/,
 };
 
 export const specialties = Object.keys(specialtyContent);
@@ -454,10 +471,109 @@ export const hrToolsDatabase = [
     ],
     complementary: "VS Code, Git, Full-Stack Architecture",
   },
+  {
+    name: "FastAPI",
+    pattern: /\bfastapi\b/i,
+    category: "Python High-Performance Web Framework",
+    competency: "Proficiency in",
+    specialtyKey: "Backend",
+    applied: [
+      "Technical Skills in CV: High-performance asynchronous REST API development, type hints, and OpenAPI validation in Python.",
+    ],
+    complementary: "Python, REST APIs, PostgreSQL, Docker, Postman",
+  },
+  {
+    name: "Django REST Framework (DRF)",
+    pattern: /\b(?:drf|django\s*rest\s*framework)\b/i,
+    category: "Web Technologies & REST API Framework",
+    competency: "Expertise in",
+    specialtyKey: "Backend",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd: Built and integrated 15 REST APIs for B2B inventory management SaaS, cutting manual reporting processes by 60%.",
+    ],
+    complementary: "Django, Python, PostgreSQL, REST APIs, Postman",
+  },
+  {
+    name: "Express.js",
+    pattern: /\bexpress(?:\.js)?\b/i,
+    category: "Backend Web Framework (Node.js)",
+    competency: "Skilled at",
+    specialtyKey: "Backend",
+    applied: [
+      "Inno-I Inventory Management System: Designed 15+ REST endpoints with Node.js and Express for managing products, suppliers, and stock levels.",
+    ],
+    complementary: "Node.js, JavaScript, MySQL, REST APIs",
+  },
+  {
+    name: "Pytest",
+    pattern: /\bpytest\b/i,
+    category: "Python Test Automation Framework",
+    competency: "Skilled at",
+    specialtyKey: "Backend",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd: Wrote Pytest test suites covering 90% of core modules, significantly reducing post-release bugs.",
+    ],
+    complementary: "Python, Django, FastAPI, CI/CD",
+  },
+  {
+    name: "Docker",
+    pattern: /\bdocker\b/i,
+    category: "Containerization & DevOps",
+    competency: "Skilled at",
+    specialtyKey: "Platforms",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd: Containerized applications with Docker and deployed to AWS via GitHub Actions CI/CD pipelines, cutting deployment time from 30 minutes to 4 minutes.",
+    ],
+    complementary: "AWS, GitHub Actions, Linux, Python",
+  },
+  {
+    name: "GitHub Actions & CI/CD",
+    pattern: /\b(?:ci[\s/-]*cd|github[\s-_]*actions)\b/i,
+    category: "DevOps & Continuous Integration / Deployment",
+    competency: "Skilled at",
+    specialtyKey: "Platforms",
+    applied: [
+      "EPA Cybernest Solutions Pvt Ltd: Automated deployment pipelines to AWS with GitHub Actions CI/CD, reducing deployment duration by 86%.",
+    ],
+    complementary: "Docker, AWS, Git, GitHub",
+  },
+  {
+    name: "GCP (Google Cloud Platform)",
+    pattern: /\b(?:gcp|google[\s-_]*cloud(?:[\s-_]*platform)?)\b/i,
+    category: "Cloud Computing Platform",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Platforms",
+    applied: [
+      "Technical Skills in CV: Cloud computing, storage, compute resources, and cloud integrations alongside AWS.",
+    ],
+    complementary: "AWS, Docker, Linux, Python",
+  },
+  {
+    name: "Google Analytics",
+    pattern: /\bgoogle[\s-_]*analytics\b/i,
+    category: "BI & Web Traffic Analytics",
+    competency: "Advanced knowledge of",
+    specialtyKey: "Analytics",
+    applied: [
+      "Technical Skills in CV: Tracking user traffic, conversion funnels, visitor KPIs, and engagement metrics.",
+    ],
+    complementary: "Google Tag Manager, Power BI, Web Design",
+  },
+  {
+    name: "Tag Manager (Google Tag Manager)",
+    pattern: /\b(?:tag[\s-_]*manager|gtm)\b/i,
+    category: "Web & Event Tracking Management",
+    competency: "Skilled at",
+    specialtyKey: "Tools",
+    applied: [
+      "Technical Skills in CV: Tag deployment, event trigger management, and analytics script coordination.",
+    ],
+    complementary: "Google Analytics, JavaScript, HTML5",
+  },
 ];
 
 export const unlistedTechPattern =
-  /\b(docker|kubernetes|k8s|java\b|c\+\+|c#|\.net|php\b|ruby\b|golang\b|go\s*lang|rust\b|swift\b|kotlin\b|angular|vue(?:\.js)?|svelte|graphql|tableau|salesforce|terraform|ansible|jenkins|azure|gcp|google\s*cloud)\b/i;
+  /\b(kubernetes|k8s|java\b|c\+\+|c#|\.net|php\b|ruby\b|golang\b|go\s*lang|rust\b|swift\b|kotlin\b|angular|vue(?:\.js)?|svelte|graphql|tableau|salesforce|terraform|ansible|jenkins|azure)\b/i;
 
 export function portfolioText(element, selector) {
   const text = element?.querySelector(selector)?.innerText ?? "";

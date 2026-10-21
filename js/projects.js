@@ -71,4 +71,15 @@ export function initProjects(options = {}) {
       document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" });
     });
   }
+
+  const resetFilterBtn = document.querySelector("#reset-filter-btn");
+  if (resetFilterBtn) {
+    resetFilterBtn.addEventListener("click", () => {
+      if (typeof onFilterChangeCallback === "function") {
+        onFilterChangeCallback("All");
+      } else {
+        setFilter("All");
+      }
+    });
+  }
 }

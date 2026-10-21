@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="2" stdDeviation="0" flood-color="#192b25" />
+    </filter>
+  </defs>
+  <!-- Background Neo-Brutalist Clay Rounded Square -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#192b25" stroke="#c8f06a" stroke-width="2.5" />
+  <!-- Accent dot -->
+  <circle cx="48" cy="16" r="4" fill="#ed785b" />
+  <!-- Monogram AK in bold geometric style -->
+  <text x="31" y="42" font-family="'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800" fill="#f6f8f5" text-anchor="middle" letter-spacing="-1">AK</text>
+  <!-- Code bracket accent -->
+  <text x="13" y="22" font-family="'DM Mono', monospace" font-size="12" font-weight="600" fill="#c8f06a">{</text>
+  <text x="49" y="52" font-family="'DM Mono', monospace" font-size="12" font-weight="600" fill="#c8f06a">}</text>
+</svg>

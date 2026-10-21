@@ -594,7 +594,7 @@ ${hrCoreCompetencies.advancedKnowledgeOf.map((item) => `  - ${item}`).join("\n")
 
   // F. Unlisted Technology Inquiries (Provide clear recruiter verification)
   const unlistedMatch = normalizedQuestion.match(
-    /\b(docker|kubernetes|k8s|java\b|c\+\+|c#|\.net|php\b|ruby\b|golang\b|go\s*lang|rust\b|swift\b|kotlin\b|angular|vue(?:\.js)?|svelte|graphql|tableau|salesforce|terraform|ansible|jenkins|azure|gcp|google\s*cloud)\b/i,
+    /\b(kubernetes|k8s|java\b|c\+\+|c#|\.net|php\b|ruby\b|golang\b|go\s*lang|rust\b|swift\b|kotlin\b|angular|vue(?:\.js)?|svelte|graphql|tableau|salesforce|terraform|ansible|jenkins|azure)\b/i,
   );
 
   if (unlistedMatch) {
@@ -746,30 +746,51 @@ ${matchedTool.applied.map((bullet) => `  - ${bullet}`).join("\n")}
 
 export function showAgentResponse(question) {
   if (!guideResponse) return;
-  const { action, answer } = runPortfolioAgent(question);
   const questionLabel = document.createElement("span");
   questionLabel.className = "ai-speaker ai-question";
   questionLabel.textContent = `YOU / ${question}`;
-  const actionLabel = document.createElement("span");
-  actionLabel.className = "ai-speaker";
-  actionLabel.textContent = `AGENT ACTION / ${action}`;
-  const answerLabel = document.createElement("span");
-  answerLabel.className = "ai-speaker";
-  answerLabel.textContent = "AGENT / LOCAL RESPONSE";
-  const answerText = document.createElement("p");
-  answerText.style.whiteSpace = "pre-line";
-  answerText.style.wordBreak = "break-word";
-  answerText.textContent = answer;
 
-  guideResponse.replaceChildren(
-    questionLabel,
-    actionLabel,
-    answerLabel,
-    answerText,
-  );
-  guideResponse.classList.remove("is-updated");
-  void guideResponse.offsetWidth;
-  guideResponse.classList.add("is-updated");
+  const loadingIndicator = document.createElement("div");
+  loadingIndicator.className = "ai-loading-indicator";
+  loadingIndicator.setAttribute("role", "status");
+  loadingIndicator.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span> <span>Analyzing query & verifying CV records...</span>';
+
+  guideResponse.replaceChildren(questionLabel, loadingIndicator);
+
+  const submitButton = guideForm?.querySelector('button[type="submit"]');
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.setAttribute("aria-busy", "true");
+  }
+
+  window.setTimeout(() => {
+    const { action, answer } = runPortfolioAgent(question);
+    const actionLabel = document.createElement("span");
+    actionLabel.className = "ai-speaker";
+    actionLabel.textContent = `AGENT ACTION / ${action}`;
+    const answerLabel = document.createElement("span");
+    answerLabel.className = "ai-speaker";
+    answerLabel.textContent = "AGENT / LOCAL RESPONSE";
+    const answerText = document.createElement("p");
+    answerText.style.whiteSpace = "pre-line";
+    answerText.style.wordBreak = "break-word";
+    answerText.textContent = answer;
+
+    guideResponse.replaceChildren(
+      questionLabel,
+      actionLabel,
+      answerLabel,
+      answerText,
+    );
+    guideResponse.classList.remove("is-updated");
+    void guideResponse.offsetWidth;
+    guideResponse.classList.add("is-updated");
+
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.removeAttribute("aria-busy");
+    }
+  }, 220);
 }
 
 export function updateChatPanelPlacement() {
